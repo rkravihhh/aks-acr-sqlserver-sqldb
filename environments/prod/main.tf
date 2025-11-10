@@ -61,11 +61,11 @@ module "aks" {
 
 
 module "pip" {
-  depends_on = [ module.rg ]
-  source   = "../../modules/azurerm_public_ip"
-  pip_name = "pip-prod-todoapp"
-  rg_name  = "rg-prod-todoapp"
-  location = "centralindia"
-  sku      = "Standard"
-  tags     = local.common_tags
+  depends_on = [module.rg]
+  source     = "../../modules/azurerm_public_ip"
+  pip_name   = "pip-prod-todoapp"
+  rg_name    = "rg-prod-todoapp"
+  location   = "centralindia"
+  sku        = "Standard"
+  tags       = local.common_tags
 }

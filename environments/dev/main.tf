@@ -55,11 +55,11 @@ module "aks" {
 
 
 module "pip" {
-  depends_on = [ module.rg ]
-  source   = "../../modules/azurerm_public_ip"
-  pip_name = "pip-dev-todoapp-ravi"
-  rg_name  = "rg-dev-todoapp-ravi-01"
-  location = "centralindia"
-  sku      = "Standard"
-  tags     = local.common_tags
+  depends_on = [module.rg]
+  source     = "../../modules/azurerm_public_ip"
+  pip_name   = "pip-dev-todoapp-ravi"
+  rg_name    = "rg-dev-todoapp-ravi-01"
+  location   = "centralindia"
+  sku        = "Standard"
+  tags       = local.common_tags
 }
