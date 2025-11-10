@@ -1,12 +1,6 @@
 name: "Prod Terraform Workflow"
 
-on:
-  pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main      
+on: workflow_dispatch
 
 permissions:
   id-token: write
