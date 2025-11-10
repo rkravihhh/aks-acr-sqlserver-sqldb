@@ -20,6 +20,11 @@ jobs:
           tenant-id: 0f7010fd-209e-4344-8457-043ffb37143b
           subscription-id: 1075ec7a-b17a-4f37-bf3f-9d68c4506dc1
             
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: latest
+          
       - name: Terraform fmt
         id: fmt
         run: terraform fmt -check
@@ -57,6 +62,11 @@ jobs:
           client-id: ff27bcf6-f60c-4a57-8b01-8eee5de2a9cd
           tenant-id: 0f7010fd-209e-4344-8457-043ffb37143b
           subscription-id: 1075ec7a-b17a-4f37-bf3f-9d68c4506dc1   
+          
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: latest
           
       - name: Terraform Init
         id: init
